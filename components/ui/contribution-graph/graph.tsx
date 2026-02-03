@@ -18,7 +18,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-const GITHUB_USERNAME = "shivamvishwakarm"
+const GITHUB_USERNAME = "atul030702"
 
 export function GitHubContributionGraph({
   contributions,

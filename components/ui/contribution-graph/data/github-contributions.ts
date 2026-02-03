@@ -1,6 +1,6 @@
 import type { Activity } from "@/components/ui/contribution-graph";
 
-const GITHUB_USERNAME = "shivamvishwakarm"
+const GITHUB_USERNAME = "atul030702"
 type GitHubContributionsResponse = {
   contributions: Activity[];
 };
