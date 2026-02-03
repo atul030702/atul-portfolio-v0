@@ -1,7 +1,6 @@
 import React from "react";
 import { USER } from "@/data/user";
-import Image from "next/image";
-import { ArrowUpRight, Dot, Globe } from "lucide-react";
+import { ArrowUpRight, Dot } from "lucide-react";
 import Link from "next/link";
 
 const Experience = () => {
@@ -18,24 +17,14 @@ const Experience = () => {
           >
             <div>
               <div className="flex items-center gap-2">
-                {job.logo ? (
-                  <Image
-                    src={job.logo || ""}
-                    alt={job.company}
-                    width={32}
-                    height={32}
-                    className="border-muted-foreground rounded-full border border-dashed p-0.5"
-                  />
-                ) : (
-                  <Dot className="border-muted-foreground rounded-full border border-dashed dark:text-white" />
-                )}
+                <Dot className="border-muted-foreground rounded-full border border-dashed dark:text-white" />
 
                 <Link href={job.website || "#"} className="flex flex-row items-center">
                   <p className="text-2xl font-semibold dark:text-white">
                     {job.company}
                   </p>
 
-                  <ArrowUpRight size={16} className="text-neutral-500" />
+                  {job?.website && <ArrowUpRight size={16} className="text-neutral-500" />}
                 </Link>
               </div>
               <div>
@@ -48,7 +37,7 @@ const Experience = () => {
             {/* time */}
             <div className="ml-8 flex flex-col-reverse items-start md:flex-col">
               <div className="text-muted-foreground flex flex-row items-center justify-end w-full gap-2 text-sm">
-                <p>{job.start}</p>-<p>{job.end}</p>
+                <p>{job.start}{job.start && " - "}{job.end}</p>
               </div>
               <div className="dark:text-neutral-200">{job.location}</div>
             </div>

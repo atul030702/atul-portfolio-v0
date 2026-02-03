@@ -64,7 +64,7 @@ export const USER = {
             ],
             start: "",
             end: "2025",
-            location: "Bihar, India (remote)",
+            location: "Patna, India",
             website: "https://sshsofttech.com/"
             
         }
@@ -114,11 +114,11 @@ And I try to prove that with every project I take on.`,
             link: "https://github.com/the-monkeys/the_monkeys/pull/452"
         },
         {
-            title: "Fix: Tanstack key invalidation for bookmarks",
-            link: "https://github.com/the-monkeys/the_monkeys/pull/493"
+            title: "Fix: Tanstack key invalidation for bookmark caching issue",
+            link: "https://github.com/the-monkeys/the_monkeys/pull/498"
         },
         {
-            title: "Reviewed swr to tanstack pull request",
+            title: "Reviewed swr to tanstack migration pull request",
             link: "https://github.com/the-monkeys/the_monkeys/pull/493"
         }
     ]
