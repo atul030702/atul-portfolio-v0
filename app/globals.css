@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme inline {
+  --color-edge: var(--edge);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary-brand);
+  --color-primary-foreground: var(--foreground);
+  --color-stone: var(--color-stone-500);
+  --color-selection: var(--selection);
+  --color-selection-foreground: var(--selection-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+}
+
+:root {
+  --primary: oklch(95.514% 0.00011 271.152);
+  --secondary-brand: #565656;
+  --foreground: oklch(0.141 0.005 285.823);
+  --background: oklch(1 0 0);
+  --border: oklch(0.92 0.004 286.32);
+  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+  --font-caveat: "Caveat", cursive;
+  /* zinc-950 */
+  --selection: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --selection-foreground: oklch(0.985 0 0);
+
+  --muted-foreground: oklch(0.705 0.015 286.067);
+}
+
+.dark {
+  --background: oklch(20% 0.03 240);
+  --foreground: oklch(95% 0.02 250);
+  --secondary-brand: oklch(70% 0.2 230);
+  --primary-foreground: oklch(100% 0 0);
+  --border: oklch(40% 0.01 250);
+  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --muted: oklch(0.274 0.006 286.033);
+  --primary: oklch(0.37 0.013 285.805);
+  --selection: oklch(100% 0 0);
+}
+
+
+
+.gradient-text {
+  @apply bg-clip-text bg-gradient-to-b from-secondary via-neutral-400 to-neutral-200 text-transparent;
+}
+
+.gradient-text-bio {
+  @apply bg-clip-text bg-gradient-to-t from-teal-500 to-teal-900 text-transparent;
+}
+
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: black;
+}
+
+body {
+  background-color: white;
+}
